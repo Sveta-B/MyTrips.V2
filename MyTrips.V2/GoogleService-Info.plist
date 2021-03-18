@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>176903015414-574p7l4bu2ovbc16d3lu7ff9urd0i86l.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.176903015414-574p7l4bu2ovbc16d3lu7ff9urd0i86l</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDyWM68PMD6O6RrSJmJ5nwb24NQ44kPOCI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>176903015414</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Sveta-Brass.MyTrips-V2</string>
+	<key>PROJECT_ID</key>
+	<string>mytrips-d6736</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mytrips-d6736.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:176903015414:ios:fbd9d599904091cf9d55d7</string>
+</dict>
+</plist>

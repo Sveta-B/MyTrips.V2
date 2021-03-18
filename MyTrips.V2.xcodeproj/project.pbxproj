@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		3FC06AF926033ADA00D9E722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC06AF726033ADA00D9E722 /* Main.storyboard */; };
 		3FC06AFB26033ADB00D9E722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC06AFA26033ADB00D9E722 /* Assets.xcassets */; };
 		3FC06AFE26033ADB00D9E722 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC06AFC26033ADB00D9E722 /* LaunchScreen.storyboard */; };
+		3FC06B0F260341C700D9E722 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FC06B0E260341C700D9E722 /* GoogleService-Info.plist */; };
+		CAB5404455FEC4E030EE1556 /* Pods_MyTrips_V2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9BB65605450D3163CD4FF9F /* Pods_MyTrips_V2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		3FC06AFA26033ADB00D9E722 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FC06AFD26033ADB00D9E722 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FC06AFF26033ADB00D9E722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC06B0E260341C700D9E722 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C3F799F3901309866AFC7FCD /* Pods-MyTrips.V2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTrips.V2.release.xcconfig"; path = "Target Support Files/Pods-MyTrips.V2/Pods-MyTrips.V2.release.xcconfig"; sourceTree = "<group>"; };
+		D9BB65605450D3163CD4FF9F /* Pods_MyTrips_V2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTrips_V2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF1ECBDAA319529A1E3541DA /* Pods-MyTrips.V2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTrips.V2.debug.xcconfig"; path = "Target Support Files/Pods-MyTrips.V2/Pods-MyTrips.V2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAB5404455FEC4E030EE1556 /* Pods_MyTrips_V2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				3FC06AF026033ADA00D9E722 /* MyTrips.V2 */,
 				3FC06AEF26033ADA00D9E722 /* Products */,
+				71B4F33730F9C1834CC14AE8 /* Pods */,
+				A6C365854A54F6850C868499 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,9 +71,27 @@
 				3FC06AF726033ADA00D9E722 /* Main.storyboard */,
 				3FC06AFA26033ADB00D9E722 /* Assets.xcassets */,
 				3FC06AFC26033ADB00D9E722 /* LaunchScreen.storyboard */,
+				3FC06B0E260341C700D9E722 /* GoogleService-Info.plist */,
 				3FC06AFF26033ADB00D9E722 /* Info.plist */,
 			);
 			path = MyTrips.V2;
+			sourceTree = "<group>";
+		};
+		71B4F33730F9C1834CC14AE8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF1ECBDAA319529A1E3541DA /* Pods-MyTrips.V2.debug.xcconfig */,
+				C3F799F3901309866AFC7FCD /* Pods-MyTrips.V2.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A6C365854A54F6850C868499 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9BB65605450D3163CD4FF9F /* Pods_MyTrips_V2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FC06B0226033ADB00D9E722 /* Build configuration list for PBXNativeTarget "MyTrips.V2" */;
 			buildPhases = (
+				3DD11D93DD4B80135E0D8801 /* [CP] Check Pods Manifest.lock */,
 				3FC06AEA26033ADA00D9E722 /* Sources */,
 				3FC06AEB26033ADA00D9E722 /* Frameworks */,
 				3FC06AEC26033ADA00D9E722 /* Resources */,
+				83B6FC8A709545224F765791 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,12 +154,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FC06AFE26033ADB00D9E722 /* LaunchScreen.storyboard in Resources */,
+				3FC06B0F260341C700D9E722 /* GoogleService-Info.plist in Resources */,
 				3FC06AFB26033ADB00D9E722 /* Assets.xcassets in Resources */,
 				3FC06AF926033ADA00D9E722 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DD11D93DD4B80135E0D8801 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyTrips.V2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83B6FC8A709545224F765791 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyTrips.V2/Pods-MyTrips.V2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyTrips.V2/Pods-MyTrips.V2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyTrips.V2/Pods-MyTrips.V2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3FC06AEA26033ADA00D9E722 /* Sources */ = {
@@ -283,12 +355,14 @@
 		};
 		3FC06B0326033ADB00D9E722 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF1ECBDAA319529A1E3541DA /* Pods-MyTrips.V2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XM58QFC27T;
 				INFOPLIST_FILE = MyTrips.V2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,18 +370,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Sveta-Brass.MyTrips-V2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		3FC06B0426033ADB00D9E722 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3F799F3901309866AFC7FCD /* Pods-MyTrips.V2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XM58QFC27T;
 				INFOPLIST_FILE = MyTrips.V2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +391,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Sveta-Brass.MyTrips-V2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
