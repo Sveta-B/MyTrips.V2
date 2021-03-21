@@ -9,5 +9,6 @@ target 'MyTrips.V2' do
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
+pod 'Firebase/Firestore'
 
 end

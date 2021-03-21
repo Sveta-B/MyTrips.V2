@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F54D612260368120086A11E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F54D611260368120086A11E /* Login.storyboard */; };
+		3F54D615260368920086A11E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F54D614260368920086A11E /* LoginViewController.swift */; };
+		3F54D61926047C770086A11E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F54D61826047C770086A11E /* SignInViewController.swift */; };
+		3F54D61C2604997F0086A11E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F54D61B2604997F0086A11E /* APIManager.swift */; };
+		3F54D63326049F530086A11E /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F54D63226049F530086A11E /* AuthError.swift */; };
 		3FC06AF226033ADA00D9E722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC06AF126033ADA00D9E722 /* AppDelegate.swift */; };
 		3FC06AF426033ADA00D9E722 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC06AF326033ADA00D9E722 /* SceneDelegate.swift */; };
 		3FC06AF626033ADA00D9E722 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC06AF526033ADA00D9E722 /* ViewController.swift */; };
@@ -18,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F54D611260368120086A11E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		3F54D614260368920086A11E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3F54D61826047C770086A11E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		3F54D61B2604997F0086A11E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		3F54D63226049F530086A11E /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		3FC06AEE26033ADA00D9E722 /* MyTrips.V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTrips.V2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC06AF126033ADA00D9E722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FC06AF326033ADA00D9E722 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +54,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F2D612426034E6800B3862C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3FC06AF526033ADA00D9E722 /* ViewController.swift */,
+				3F54D614260368920086A11E /* LoginViewController.swift */,
+				3F54D61826047C770086A11E /* SignInViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3F2D612526034E8D00B3862C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F2D612626034E9500B3862C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3F2D612726034E9E00B3862C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3F54D61B2604997F0086A11E /* APIManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3F2D612826034EBB00B3862C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3F54D63226049F530086A11E /* AuthError.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3F2D612926034EC300B3862C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3FC06AF726033ADA00D9E722 /* Main.storyboard */,
+				3FC06AFC26033ADB00D9E722 /* LaunchScreen.storyboard */,
+				3F54D611260368120086A11E /* Login.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3F2D612A26034EDF00B3862C /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				3FC06B0E260341C700D9E722 /* GoogleService-Info.plist */,
+				3FC06AFF26033ADB00D9E722 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		3F2D612B26034EEB00B3862C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3FC06AE526033AD900D9E722 = {
 			isa = PBXGroup;
 			children = (
@@ -67,12 +143,15 @@
 			children = (
 				3FC06AF126033ADA00D9E722 /* AppDelegate.swift */,
 				3FC06AF326033ADA00D9E722 /* SceneDelegate.swift */,
-				3FC06AF526033ADA00D9E722 /* ViewController.swift */,
-				3FC06AF726033ADA00D9E722 /* Main.storyboard */,
+				3F2D612726034E9E00B3862C /* Services */,
+				3F2D612626034E9500B3862C /* Models */,
+				3F2D612426034E6800B3862C /* Controllers */,
+				3F2D612526034E8D00B3862C /* View */,
+				3F2D612826034EBB00B3862C /* Helpers */,
+				3F2D612B26034EEB00B3862C /* Extensions */,
+				3F2D612926034EC300B3862C /* Storyboards */,
+				3F2D612A26034EDF00B3862C /* Supporting files */,
 				3FC06AFA26033ADB00D9E722 /* Assets.xcassets */,
-				3FC06AFC26033ADB00D9E722 /* LaunchScreen.storyboard */,
-				3FC06B0E260341C700D9E722 /* GoogleService-Info.plist */,
-				3FC06AFF26033ADB00D9E722 /* Info.plist */,
 			);
 			path = MyTrips.V2;
 			sourceTree = "<group>";
@@ -154,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FC06AFE26033ADB00D9E722 /* LaunchScreen.storyboard in Resources */,
+				3F54D612260368120086A11E /* Login.storyboard in Resources */,
 				3FC06B0F260341C700D9E722 /* GoogleService-Info.plist in Resources */,
 				3FC06AFB26033ADB00D9E722 /* Assets.xcassets in Resources */,
 				3FC06AF926033ADA00D9E722 /* Main.storyboard in Resources */,
@@ -209,9 +289,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F54D61C2604997F0086A11E /* APIManager.swift in Sources */,
+				3F54D615260368920086A11E /* LoginViewController.swift in Sources */,
 				3FC06AF626033ADA00D9E722 /* ViewController.swift in Sources */,
 				3FC06AF226033ADA00D9E722 /* AppDelegate.swift in Sources */,
+				3F54D61926047C770086A11E /* SignInViewController.swift in Sources */,
 				3FC06AF426033ADA00D9E722 /* SceneDelegate.swift in Sources */,
+				3F54D63326049F530086A11E /* AuthError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -343,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -361,7 +445,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XM58QFC27T;
-				INFOPLIST_FILE = MyTrips.V2/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyTrips.V2/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -382,7 +466,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XM58QFC27T;
-				INFOPLIST_FILE = MyTrips.V2/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyTrips.V2/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
