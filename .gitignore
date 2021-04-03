@@ -1,2 +1,19 @@
+# Xcode
+
+MyTrips.V2.gitignore
+
+## OS X
+
+*.DS_Store
+.DS_Store
+
+## Build generated
+
+build/
+DerivedData/
+Build
+Index
+
 README.md
+
 Pods/
