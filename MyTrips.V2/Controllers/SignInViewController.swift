@@ -38,7 +38,8 @@ class SignInViewController: UIViewController {
             switch result {
             case .success:
              let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(identifier: "Main") as! ViewController
+                let vc = storyboard.instantiateViewController(identifier: "MainTabBarViewController") as! MainTabBarViewController
+                vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
                 
                 print("успешно")
@@ -56,6 +57,10 @@ class SignInViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
     self.present(alert, animated: true, completion: nil)
         }
+    
+    @IBAction func cancelRegister(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
 
 }
 

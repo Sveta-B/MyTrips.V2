@@ -112,8 +112,8 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lcb-YC-zkF">
-                                <rect key="frame" x="157" y="64" width="100" height="100"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lcb-YC-zkF">
+                                <rect key="frame" x="157" y="65.5" width="100" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="wFk-mF-vWU"/>
                                 </constraints>
@@ -121,6 +121,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pe2-oy-Evj">
                                 <rect key="frame" x="36" y="832" width="343" height="30"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="cancelRegister:" destination="WZ8-cp-j3a" eventType="touchUpInside" id="Iib-an-KJP"/>
+                                    <action selector="cancelRegister:" destination="5uw-h5-Nnj" eventType="touchUpInside" id="V85-aV-3P0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOf-hR-s9c">
                                 <rect key="frame" x="36" y="429" width="343" height="30"/>
@@ -156,11 +160,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88d-KQ-mRR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="WZ8-cp-j3a" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="293" y="149"/>
+            <point key="canvasLocation" x="292.75362318840581" y="148.66071428571428"/>
         </scene>
     </scenes>
     <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

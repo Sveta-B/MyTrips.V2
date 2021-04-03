@@ -22,7 +22,7 @@ extension AuthError: LocalizedError {
         case .notFilled:
             return NSLocalizedString("Заполните все поля", comment: "")
         case .invalidEmail:
-            return NSLocalizedString("email_is_not_valid", comment: "")
+            return NSLocalizedString("Не верный логин или пароль", comment: "")
         case .unknownError:
             /// we will use server_error key to display user internal error
             return NSLocalizedString("server_error", comment: "")

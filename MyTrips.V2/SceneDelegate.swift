@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -14,11 +16,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        let storyboard = UIStoryboard(name: "Login", bundle: .main)
-        if let initialViewController = storyboard.instantiateInitialViewController() {
-            window?.rootViewController = initialViewController
-            window?.makeKeyAndVisible()
-        }
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            var storyboard = UIStoryboard()
+            if user != nil  {
+                storyboard = UIStoryboard(name: "Main", bundle: .main)
+                
+            } else {
+                storyboard = UIStoryboard(name: "Login", bundle: .main)
+                }
+            if let initialViewController = storyboard.instantiateInitialViewController() {
+                self.window?.rootViewController = initialViewController
+                self.window?.makeKeyAndVisible()
+            }
+            }
+        
+    
+        
+//        if let user = Auth.auth().currentUser {
+//            let storyboardMain = UIStoryboard(name: "Main", bundle: .main)
+//            if let initialViewController = storyboardMain.instantiateInitialViewController() {
+//                window?.rootViewController = initialViewController
+//                window?.makeKeyAndVisible()
+//            }
+//        } else {
+           
+                
+    //        }
+     
+        
+        
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -52,4 +78,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
+
+//extension SceneDelegate {
+//    func configureInitialRootViewController(for window: UIWindow?) {
+//        let defaults = UserDefaults.standard
+//        let initialViewController: UIViewController
+//
+//        if let user = Auth.auth().currentUser,
+//           let userUid = user.uid {
+//            initialViewController = UIStoryboard.initialViewController(
+//        } else {
+//            initialViewController = UIStoryboard.initialViewController(for: .login)
+//        }
+//
+//        window?.rootViewController = initialViewController
+//        window?.makeKeyAndVisible()
+//    }
+//}
 
