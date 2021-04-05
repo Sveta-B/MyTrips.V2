@@ -154,23 +154,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYd-Ix-c4C">
-                                <rect key="frame" x="87" y="231" width="236" height="30"/>
+                                <rect key="frame" x="87" y="228" width="236" height="33"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
                                     <action selector="logout:" destination="hCX-NL-V7C" eventType="touchUpInside" id="0EN-HR-NKU"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="owe" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="09F-ub-lHd">
+                                <rect key="frame" x="157" y="98" width="100" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="09F-ub-lHd" secondAttribute="height" multiplier="100:97" id="Hwm-oN-UP6"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EgX-Ia-Ofj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="09F-ub-lHd" firstAttribute="leading" secondItem="EgX-Ia-Ofj" secondAttribute="leading" constant="157" id="FLd-uT-sJB"/>
                             <constraint firstItem="EgX-Ia-Ofj" firstAttribute="bottom" secondItem="UYd-Ix-c4C" secondAttribute="bottom" constant="552" id="NCI-bA-k1C"/>
+                            <constraint firstItem="EgX-Ia-Ofj" firstAttribute="trailing" secondItem="09F-ub-lHd" secondAttribute="trailing" constant="157" id="VNX-z3-80s"/>
+                            <constraint firstItem="09F-ub-lHd" firstAttribute="top" secondItem="EgX-Ia-Ofj" secondAttribute="top" constant="54" id="XSL-YW-8fS"/>
                             <constraint firstItem="EgX-Ia-Ofj" firstAttribute="trailing" secondItem="UYd-Ix-c4C" secondAttribute="trailing" constant="91" id="arx-ug-8Xo"/>
                             <constraint firstItem="UYd-Ix-c4C" firstAttribute="leading" secondItem="EgX-Ia-Ofj" secondAttribute="leading" constant="87" id="eon-WA-8we"/>
-                            <constraint firstItem="UYd-Ix-c4C" firstAttribute="top" secondItem="EgX-Ia-Ofj" secondAttribute="top" constant="187" id="kvv-Dh-frl"/>
+                            <constraint firstItem="UYd-Ix-c4C" firstAttribute="top" secondItem="09F-ub-lHd" secondAttribute="bottom" constant="33" id="ijL-Ng-CTE"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" selectedImage="person.fill" catalog="system" id="izz-lH-tcm"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="09F-ub-lHd" id="s15-2S-Oqd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVv-0h-5o7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,6 +221,7 @@
         <image name="checkmark.seal.fill" catalog="system" width="128" height="128"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="line.horizontal.3.decrease.circle" catalog="system" width="128" height="121"/>
+        <image name="owe" width="1360" height="800"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

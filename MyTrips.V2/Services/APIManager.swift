@@ -29,47 +29,21 @@ static let shared = APIManager()
          
      }
     
-    func fetchData(userUid: String) -> (UIImage, String)? {
-           var imageForAvatar = UIImage()
-        var userName: String?
-           guard let currentUser = Auth.auth().currentUser else {return nil }
-         //  self.user = MyUser(user: currentUser)
-         let ref = Database.database().reference(withPath: "users").child(userUid)
-        
-          ref.child("avatarUrl").observe(.value) { (snapshot) in
-               let url = URL(string: snapshot.value as? String ?? "https://firebasestorage.googleapis.com/v0/b/mytrips-v3-cf18f.appspot.com/o/avatars%2FfilledStar.png?alt=media&token=7bc4b930-4a58-4a97-afca-1b7cdfb15d0a")
-               do {
-                   let data = try Data(contentsOf: url!)
-                   imageForAvatar = UIImage(data: data) ?? UIImage(named: "photo")!
-               } catch {
-                   print("no data")
-               }
-               
-               
-           }
-           ref.child("fullname").observe(.value) { (snapshot) in
-               userName = snapshot.value as? String ?? "Name"
-               
-           }
-        return (imageForAvatar, userName) as? (UIImage, String)
+    class func getData(userUid: String, complition: @escaping (UIImage) -> Void)  {
+      
+         let ref = Storage.storage().reference().child("avatars")
+        var image = UIImage(named: "owe")!
+        let avatarRef = ref.child(userUid)
+        avatarRef.getData(maxSize: 1024*1024, completion: { data, error in
+            guard error == nil else { complition(image); return}
+            image = UIImage(data: data!)!
+            complition(image)
+        })
+          
            
        }
     
     
-//    class func uploadAvatar(image: UIImage?, uid: String?, complition: @escaping (AuthResult) -> Void) {
-//        let ref = Storage.storage().reference().child("avatars").child(uid!)
-//        guard let imageData = image!.jpegData(compressionQuality: 0.4) else {
-//                    return }
-//                        let metadata = StorageMetadata()
-//                        metadata.contentType = "image/jpeg"
-//                        ref.putData(imageData, metadata: metadata) { (metadata, error) in
-//                            guard let _ = metadata else {
-//                            print(error!)
-//                            return
-//                            }
-//                           
-//    }
-//                        }
    
     class  func register(email: String?, password: String?, fullname: String?, avatar: UIImage?,  complition: @escaping (AuthResult) -> Void)  {
         

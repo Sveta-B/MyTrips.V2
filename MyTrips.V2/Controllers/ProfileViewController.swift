@@ -10,10 +10,28 @@ import FirebaseAuth
 
 class ProfileViewController: UIViewController {
 
+  
+    var imageForAvatar =  UIImage(named: "owe") {
+        willSet {
+            avatarImageView.image = newValue
+        }
+    }
+    
+    @IBOutlet weak var avatarImageView: UIImageView!
+    
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        avatarImageView.image = imageForAvatar
+        avatarImageView.layer.cornerRadius = avatarImageView.bounds.height / 2
+        avatarImageView.clipsToBounds = true
+        guard let currentUser = Auth.auth().currentUser else {return }
+        print(currentUser.uid)
+        APIManager.getData(userUid: currentUser.uid) { (image) in
+            self.imageForAvatar = image
+        }
+    
     }
     
     @IBAction func logout(_ sender: UIButton) {
