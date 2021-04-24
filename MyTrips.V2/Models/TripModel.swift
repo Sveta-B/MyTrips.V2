@@ -35,12 +35,12 @@ struct TripModel {
         countryImageURL = snapshotValue["countryImageURL"] as? String
         costs = snapshotValue["costs"] as! Int
         date = snapshotValue["date"] as! String
-        userID = snapshotValue["userID"] as? String
+        userID = snapshotValue["userID"] as! String
         ref = snapshot.ref
 
     }
     func  convertToDictionary() -> Any {
-        return ["countryName": countryName, "countryImageURL": countryImageURL, "costs": costs, "date": date, "userID": userID as Any]
+        return ["countryName": countryName, "countryImageURL": countryImageURL, "costs": costs, "date": date, "userID": userID]
     }
 
 }

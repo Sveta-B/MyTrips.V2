@@ -9,47 +9,63 @@ import UIKit
 
 class TripsViewController: UIViewController {
     
-    let trips = [TripModel(countryName: "Spain", costs: 1000, countryImageURL: "", date: "march", userID: nil)]
+    let trips = [TripModel(countryName: "Spain", costs: 1000, countryImageURL: "", date: "march", userID: nil), TripModel(countryName: "Spain", costs: 1000, countryImageURL: "", date: "march", userID: nil), TripModel(countryName: "Spain", costs: 1000, countryImageURL: "", date: "march", userID: nil)]
 
+   
     @IBOutlet weak var tripsTable: UITableView!
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tripsTable.delegate = self
         tripsTable.dataSource = self
-        tripsTable.tableFooterView = UIView()
-        tripsTable.register(UINib(nibName: "TripTableViewCell", bundle: nil), forCellReuseIdentifier: "TripTableViewCell")
+        tripsTable.showsVerticalScrollIndicator = false
+       
+        tripsTable.register(UINib(nibName: "TripsTableViewCell", bundle: nil), forCellReuseIdentifier: "TripsTableViewCell")
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
 
 extension TripsViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        trips.count
+    }
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return trips.count
+    return 1
 }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 20
+    }
 
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let hv = UIView()
+        hv.backgroundColor = #colorLiteral(red: 0.8979505897, green: 0.8981012702, blue: 0.8979307413, alpha: 1)
+        return hv
+    }
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let fv = UIView()
+        fv.backgroundColor = #colorLiteral(red: 0.8979505897, green: 0.8981012702, blue: 0.8979307413, alpha: 1)
+        return fv
+    }
+   
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = tableView.dequeueReusableCell(withIdentifier: "TripTableViewCell", for: indexPath) as! TripTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "TripsTableViewCell", for: indexPath) as! TripsTableViewCell
     let trip = trips[indexPath.row]
     cell.countryLabel.text = trip.countryName
     cell.dateLabel.text = trip.date
     cell.costsLabel.text = String(trip.costs)
+
+    
+   
     return cell
 }
-
 
 }
 

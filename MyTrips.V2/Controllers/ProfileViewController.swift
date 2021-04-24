@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController {
             avatarImageView.image = newValue
         }
     }
+  //  @IBOutlet weak var avatarImageView: UIImageView!
     
     @IBOutlet weak var avatarImageView: UIImageView!
     
@@ -29,11 +30,16 @@ class ProfileViewController: UIViewController {
         guard let currentUser = Auth.auth().currentUser else {return }
         print(currentUser.uid)
         APIManager.getData(userUid: currentUser.uid) { (image) in
-            self.imageForAvatar = image
+          
+                self.imageForAvatar = image
+            
+            
         }
     
     }
     
+   // @IBAction func logout(_ sender: UIButton) {
+  //  }
     @IBAction func logout(_ sender: UIButton) {
         do {
                 try FirebaseAuth.Auth.auth().signOut()

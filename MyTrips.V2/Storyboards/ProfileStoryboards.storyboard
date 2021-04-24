@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Av0-eu-dwi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="f5O-T4-2vK">
+            <objects>
+                <viewController id="fpL-nV-87K" customClass="ProfileViewController" customModule="MyTrips_V2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FXa-ua-PRw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qEl-6t-1ZK">
+                                <rect key="frame" x="157" y="129" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qEl-6t-1ZK" secondAttribute="height" multiplier="1:1" id="8Es-sH-ktw"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITh-rP-ott">
+                                <rect key="frame" x="181" y="303" width="52" height="30"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logout:" destination="fpL-nV-87K" eventType="touchUpInside" id="qib-85-bmW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wrt-Px-iR2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ITh-rP-ott" firstAttribute="top" secondItem="qEl-6t-1ZK" secondAttribute="bottom" constant="74" id="3LV-5P-5Uf"/>
+                            <constraint firstItem="ITh-rP-ott" firstAttribute="leading" secondItem="wrt-Px-iR2" secondAttribute="leading" constant="181" id="6XL-mi-DOa"/>
+                            <constraint firstItem="qEl-6t-1ZK" firstAttribute="top" secondItem="wrt-Px-iR2" secondAttribute="top" constant="41" id="Dec-ZA-HzY"/>
+                            <constraint firstItem="wrt-Px-iR2" firstAttribute="trailing" secondItem="qEl-6t-1ZK" secondAttribute="trailing" constant="157" id="K1S-br-kgW"/>
+                            <constraint firstItem="qEl-6t-1ZK" firstAttribute="centerX" secondItem="FXa-ua-PRw" secondAttribute="centerX" id="MqV-IU-0E9"/>
+                            <constraint firstItem="wrt-Px-iR2" firstAttribute="trailing" secondItem="ITh-rP-ott" secondAttribute="trailing" constant="181" id="XXp-ca-y07"/>
+                            <constraint firstItem="ITh-rP-ott" firstAttribute="centerX" secondItem="FXa-ua-PRw" secondAttribute="centerX" id="hS7-LC-1Vw"/>
+                            <constraint firstItem="qEl-6t-1ZK" firstAttribute="leading" secondItem="wrt-Px-iR2" secondAttribute="leading" constant="157" id="r1v-dT-rcN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="X4F-cR-h6J"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="qEl-6t-1ZK" id="vhH-5M-fXs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gq-1N-sPe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926.08695652173924" y="107.8125"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Cne-eg-i77">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Av0-eu-dwi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" selectedImage="person.fill" catalog="system" id="NFb-LO-S0g"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FmX-Ig-GXJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fpL-nV-87K" kind="relationship" relationship="rootViewController" id="A0Z-Pc-eFD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TpN-Hk-TaO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="107.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

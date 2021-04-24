@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="reH-Nc-gY0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Trips-->
+        <scene sceneID="ZZ6-Wc-Bg2">
+            <objects>
+                <viewController id="963-be-8I4" customClass="TripsViewController" customModule="MyTrips_V2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4A2-D8-Xu7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XWt-e3-IPa">
+                                <rect key="frame" x="20" y="237" width="374" height="576"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HsR-A8-9h8" customClass="CustomView" customModule="MyTrips_V2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="756" width="374" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpp-kz-wMY">
+                                        <rect key="frame" x="8" y="8" width="358" height="33"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="tintColor" systemColor="linkColor"/>
+                                        <state key="normal" title="Add Trip">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="lpp-kz-wMY" secondAttribute="bottom" constant="8" id="Mhm-9P-Scl"/>
+                                    <constraint firstAttribute="trailing" secondItem="lpp-kz-wMY" secondAttribute="trailing" constant="8" id="Vgm-Gk-bRQ"/>
+                                    <constraint firstItem="lpp-kz-wMY" firstAttribute="leading" secondItem="HsR-A8-9h8" secondAttribute="leading" constant="8" id="eeF-at-51W"/>
+                                    <constraint firstItem="lpp-kz-wMY" firstAttribute="top" secondItem="HsR-A8-9h8" secondAttribute="top" constant="8" id="n02-d2-t2a"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CEv-eS-hSQ">
+                                <rect key="frame" x="20" y="173" width="374" height="56"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="VZv-VD-lWb">
+                                        <rect key="frame" x="0.0" y="0.0" width="307" height="56"/>
+                                        <color key="barTintColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZK-KH-ib6">
+                                        <rect key="frame" x="315" y="0.0" width="59" height="56"/>
+                                        <state key="normal" image="scribble" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nyc-Q5-xv5"/>
+                        <color key="backgroundColor" red="0.89803922179999995" green="0.89803922179999995" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Nyc-Q5-xv5" firstAttribute="trailing" secondItem="XWt-e3-IPa" secondAttribute="trailing" constant="20" id="8df-gj-rMX"/>
+                            <constraint firstItem="CEv-eS-hSQ" firstAttribute="top" secondItem="Nyc-Q5-xv5" secondAttribute="top" constant="33" id="BPF-ZC-F37"/>
+                            <constraint firstItem="CEv-eS-hSQ" firstAttribute="leading" secondItem="Nyc-Q5-xv5" secondAttribute="leading" constant="20" id="Gwo-4a-Fm8"/>
+                            <constraint firstItem="HsR-A8-9h8" firstAttribute="leading" secondItem="Nyc-Q5-xv5" secondAttribute="leading" constant="20" id="JFE-mA-EfG"/>
+                            <constraint firstItem="Nyc-Q5-xv5" firstAttribute="bottom" secondItem="XWt-e3-IPa" secondAttribute="bottom" id="K4j-n7-mv2"/>
+                            <constraint firstItem="Nyc-Q5-xv5" firstAttribute="bottom" secondItem="HsR-A8-9h8" secondAttribute="bottom" constant="8" id="OhT-Ym-zoD"/>
+                            <constraint firstItem="XWt-e3-IPa" firstAttribute="leading" secondItem="Nyc-Q5-xv5" secondAttribute="leading" constant="20" id="QYE-aI-RnP"/>
+                            <constraint firstItem="Nyc-Q5-xv5" firstAttribute="trailing" secondItem="HsR-A8-9h8" secondAttribute="trailing" constant="20" id="VT3-lK-HQ4"/>
+                            <constraint firstItem="XWt-e3-IPa" firstAttribute="top" secondItem="CEv-eS-hSQ" secondAttribute="bottom" constant="8" id="hhe-Vt-zHz"/>
+                            <constraint firstItem="Nyc-Q5-xv5" firstAttribute="trailing" secondItem="CEv-eS-hSQ" secondAttribute="trailing" constant="20" id="sDR-8a-hJw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Trips" id="Olk-7b-hcj"/>
+                    <connections>
+                        <outlet property="searchBar" destination="VZv-VD-lWb" id="uCS-62-iGH"/>
+                        <outlet property="tripsTable" destination="XWt-e3-IPa" id="tjW-iB-mou"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fWV-Te-hMi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.8840579710145" y="32.8125"/>
+        </scene>
+        <!--Trips-->
+        <scene sceneID="Qi3-Hi-U6v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="reH-Nc-gY0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Trips" selectedImage="case.fill" catalog="system" id="V8g-FT-Rhd"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="0rh-iU-L3y">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="963-be-8I4" kind="relationship" relationship="rootViewController" id="evI-nO-D2l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3QN-ed-nNd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="32.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="case.fill" catalog="system" width="128" height="98"/>
+        <image name="scribble" catalog="system" width="128" height="118"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

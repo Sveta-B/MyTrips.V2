@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3F13EE6E2614F88C00820668 /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13EE6D2614F88C00820668 /* MyUser.swift */; };
 		3F13EE712615021400820668 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13EE702615021400820668 /* TripsViewController.swift */; };
+		3F1DB145262D8F700096BDC7 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1DB143262D8F700096BDC7 /* TripsTableViewCell.swift */; };
+		3F1DB146262D8F700096BDC7 /* TripsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1DB144262D8F700096BDC7 /* TripsTableViewCell.xib */; };
 		3F4A5179261709EA00D6051F /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4A5178261709EA00D6051F /* TripModel.swift */; };
 		3F54D612260368120086A11E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F54D611260368120086A11E /* Login.storyboard */; };
 		3F54D615260368920086A11E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F54D614260368920086A11E /* LoginViewController.swift */; };
@@ -17,8 +19,10 @@
 		3F54D63326049F530086A11E /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F54D63226049F530086A11E /* AuthError.swift */; };
 		3F54D63A2607E24A0086A11E /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F54D6392607E24A0086A11E /* MainTabBarViewController.swift */; };
 		3F54D6652613B2B30086A11E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F54D6642613B2B30086A11E /* ProfileViewController.swift */; };
-		3FB888F626164E2E002C243F /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB888F426164E2E002C243F /* TripTableViewCell.swift */; };
-		3FB888F726164E2E002C243F /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB888F526164E2E002C243F /* TripTableViewCell.xib */; };
+		3F634F98262B6FB700EA2B8C /* ProfileStoryboards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F634F97262B6FB700EA2B8C /* ProfileStoryboards.storyboard */; };
+		3F634F9C262B741700EA2B8C /* DreamsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F634F9B262B741700EA2B8C /* DreamsStoryboard.storyboard */; };
+		3F634F9F262B742800EA2B8C /* TripsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F634F9E262B742800EA2B8C /* TripsStoryboard.storyboard */; };
+		3F634FA2262B743600EA2B8C /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F634FA1262B743600EA2B8C /* HomeStoryboard.storyboard */; };
 		3FB888FA2616F9CE002C243F /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB888F92616F9CE002C243F /* CustomView.swift */; };
 		3FC06AF226033ADA00D9E722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC06AF126033ADA00D9E722 /* AppDelegate.swift */; };
 		3FC06AF426033ADA00D9E722 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC06AF326033ADA00D9E722 /* SceneDelegate.swift */; };
@@ -32,6 +36,8 @@
 /* Begin PBXFileReference section */
 		3F13EE6D2614F88C00820668 /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
 		3F13EE702615021400820668 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		3F1DB143262D8F700096BDC7 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
+		3F1DB144262D8F700096BDC7 /* TripsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripsTableViewCell.xib; sourceTree = "<group>"; };
 		3F4A5178261709EA00D6051F /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		3F54D611260368120086A11E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3F54D614260368920086A11E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -40,8 +46,10 @@
 		3F54D63226049F530086A11E /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		3F54D6392607E24A0086A11E /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		3F54D6642613B2B30086A11E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		3FB888F426164E2E002C243F /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
-		3FB888F526164E2E002C243F /* TripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
+		3F634F97262B6FB700EA2B8C /* ProfileStoryboards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboards.storyboard; sourceTree = "<group>"; };
+		3F634F9B262B741700EA2B8C /* DreamsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DreamsStoryboard.storyboard; sourceTree = "<group>"; };
+		3F634F9E262B742800EA2B8C /* TripsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsStoryboard.storyboard; sourceTree = "<group>"; };
+		3F634FA1262B743600EA2B8C /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		3FB888F92616F9CE002C243F /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		3FC06AEE26033ADA00D9E722 /* MyTrips.V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTrips.V2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC06AF126033ADA00D9E722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,8 +84,8 @@
 				3F54D61826047C770086A11E /* SignInViewController.swift */,
 				3F54D6642613B2B30086A11E /* ProfileViewController.swift */,
 				3F13EE702615021400820668 /* TripsViewController.swift */,
-				3FB888F426164E2E002C243F /* TripTableViewCell.swift */,
-				3FB888F526164E2E002C243F /* TripTableViewCell.xib */,
+				3F1DB143262D8F700096BDC7 /* TripsTableViewCell.swift */,
+				3F1DB144262D8F700096BDC7 /* TripsTableViewCell.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -119,8 +127,12 @@
 			isa = PBXGroup;
 			children = (
 				3FC06AF726033ADA00D9E722 /* Main.storyboard */,
-				3FC06AFC26033ADB00D9E722 /* LaunchScreen.storyboard */,
 				3F54D611260368120086A11E /* Login.storyboard */,
+				3F634FA1262B743600EA2B8C /* HomeStoryboard.storyboard */,
+				3F634F9E262B742800EA2B8C /* TripsStoryboard.storyboard */,
+				3F634F9B262B741700EA2B8C /* DreamsStoryboard.storyboard */,
+				3F634F97262B6FB700EA2B8C /* ProfileStoryboards.storyboard */,
+				3FC06AFC26033ADB00D9E722 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -253,12 +265,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FB888F726164E2E002C243F /* TripTableViewCell.xib in Resources */,
+				3F1DB146262D8F700096BDC7 /* TripsTableViewCell.xib in Resources */,
+				3F634F9F262B742800EA2B8C /* TripsStoryboard.storyboard in Resources */,
+				3F634F98262B6FB700EA2B8C /* ProfileStoryboards.storyboard in Resources */,
 				3FC06AFE26033ADB00D9E722 /* LaunchScreen.storyboard in Resources */,
 				3F54D612260368120086A11E /* Login.storyboard in Resources */,
 				3FC06B0F260341C700D9E722 /* GoogleService-Info.plist in Resources */,
+				3F634FA2262B743600EA2B8C /* HomeStoryboard.storyboard in Resources */,
 				3FC06AFB26033ADB00D9E722 /* Assets.xcassets in Resources */,
 				3FC06AF926033ADA00D9E722 /* Main.storyboard in Resources */,
+				3F634F9C262B741700EA2B8C /* DreamsStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +328,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F4A5179261709EA00D6051F /* TripModel.swift in Sources */,
-				3FB888F626164E2E002C243F /* TripTableViewCell.swift in Sources */,
 				3F54D63A2607E24A0086A11E /* MainTabBarViewController.swift in Sources */,
 				3F54D61C2604997F0086A11E /* APIManager.swift in Sources */,
 				3F54D615260368920086A11E /* LoginViewController.swift in Sources */,
@@ -323,6 +338,7 @@
 				3F13EE6E2614F88C00820668 /* MyUser.swift in Sources */,
 				3FB888FA2616F9CE002C243F /* CustomView.swift in Sources */,
 				3F54D63326049F530086A11E /* AuthError.swift in Sources */,
+				3F1DB145262D8F700096BDC7 /* TripsTableViewCell.swift in Sources */,
 				3F13EE712615021400820668 /* TripsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
