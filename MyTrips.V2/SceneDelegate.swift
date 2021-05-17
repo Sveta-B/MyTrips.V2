@@ -29,22 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 self.window?.makeKeyAndVisible()
             }
             }
-        
-    
-        
-//        if let user = Auth.auth().currentUser {
-//            let storyboardMain = UIStoryboard(name: "Main", bundle: .main)
-//            if let initialViewController = storyboardMain.instantiateInitialViewController() {
-//                window?.rootViewController = initialViewController
-//                window?.makeKeyAndVisible()
-//            }
-//        } else {
-           
-                
-    //        }
-     
-        
-        
+
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 

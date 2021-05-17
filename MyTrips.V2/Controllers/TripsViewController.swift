@@ -8,12 +8,11 @@
 import UIKit
 
 class TripsViewController: UIViewController {
-    
+    // MARK: - Properties
     let trips = [TripModel(countryName: "Spain", costs: 1000, countryImageURL: "", date: "march", userID: nil), TripModel(countryName: "Spain", costs: 1000, countryImageURL: "", date: "march", userID: nil), TripModel(countryName: "Spain", costs: 1000, countryImageURL: "", date: "march", userID: nil)]
 
-   
+    // MARK: - IBOutlets
     @IBOutlet weak var tripsTable: UITableView!
-    
     @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
@@ -21,14 +20,11 @@ class TripsViewController: UIViewController {
         tripsTable.delegate = self
         tripsTable.dataSource = self
         tripsTable.showsVerticalScrollIndicator = false
-       
         tripsTable.register(UINib(nibName: "TripsTableViewCell", bundle: nil), forCellReuseIdentifier: "TripsTableViewCell")
-        
     }
-   
-
 }
 
+// MARK: - TableViewDelegate, TableViewDataSource
 extension TripsViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         trips.count

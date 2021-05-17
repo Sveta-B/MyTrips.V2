@@ -13,7 +13,7 @@ import FirebaseDatabase
 
 class SignInViewController: UIViewController {
     
-  
+// MARK: - BOutlets
         
     
     @IBOutlet weak var avatarImage: UIImageView!
@@ -31,7 +31,7 @@ class SignInViewController: UIViewController {
        
     }
     
-
+// MARK: - IBActions
     @IBAction func pressedSingUp(_ sender: UIButton) {
         
         APIManager.register(email: emailTextField.text, password: passwordTextField.text, fullname: firstNameTextField.text, avatar: avatarImage.image) { (result) in
@@ -51,6 +51,8 @@ class SignInViewController: UIViewController {
         
         }
         }
+
+// MARK: - Alert
     
     func showAlert(mesage: String, title: String)  {
     let alert = UIAlertController(title: title, message: mesage, preferredStyle: .alert)
@@ -64,6 +66,7 @@ class SignInViewController: UIViewController {
 
 }
 
+// MARK: - ImagePicker
 
 extension SignInViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 func chooseImagePicker()  {

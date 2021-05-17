@@ -11,17 +11,17 @@ import FirebaseStorage
 import FirebaseDatabase
 
 class LoginViewController: UIViewController {
+    
+    // MARK: - IBOutlet
 
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-              
 
     }
-    
+    // MARK: - IBAction
     @IBAction func pressedLogIn(_ sender: UIButton) {
         APIManager.singIn(email: emailTextField.text, password: passwordTextField.text) { (result) in
             switch result {
@@ -35,18 +35,16 @@ class LoginViewController: UIViewController {
                 print(error)
                 self.showAlert(mesage: "Wrong password or email", title: "Error")
             }
-            
-                
             }
-            
         }
+    
+    // MARK: - Alert
     
     func showAlert(mesage: String, title: String)  {
     let alert = UIAlertController(title: title, message: mesage, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
     self.present(alert, animated: true, completion: nil)
         }
-        
     }
     
     

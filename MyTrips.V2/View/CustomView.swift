@@ -11,7 +11,7 @@ class CustomView: UIView {
     
     override init(frame: CGRect) {
             super.init(frame: frame)
- setRadiusAndShadow()
+    setRadiusAndShadow()
         }
         
         required init?(coder eDecoder: NSCoder) {

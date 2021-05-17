@@ -11,23 +11,20 @@ import FirebaseFirestore
 
 
 class APIManager {
-    
-    
-    
-
+ 
 static let shared = APIManager()
     
     enum AuthResult {
             case success
             case failure(Error)
         }
- 
     class  func configureDB() -> Firestore {
          var db: Firestore!
          db = Firestore.firestore()
          return db
-         
      }
+    
+    // MARK: - Get Data
     
     class func getData(userUid: String, complition: @escaping (UIImage) -> Void)  {
       
@@ -43,8 +40,7 @@ static let shared = APIManager()
            
        }
     
-    
-   
+    // MARK: - Register
     class  func register(email: String?, password: String?, fullname: String?, avatar: UIImage?,  complition: @escaping (AuthResult) -> Void)  {
         
         var userUid: String?
@@ -64,8 +60,7 @@ static let shared = APIManager()
             }
              userUid = result!.user.uid
             ref = Storage.storage().reference().child("avatars").child(userUid!)
-           
-            
+
             guard   let imageForAvatar =  avatar ?? defaultAvatar else {return}
         
             guard let imageData = imageForAvatar.jpegData(compressionQuality: 0.4) else {
@@ -78,8 +73,7 @@ static let shared = APIManager()
                     print(error!)
                     return
                 }
-                
-                
+
                 ref?.downloadURL { (downloadedUrl, error) in
                     if downloadedUrl != nil {
                         stringUrl = downloadedUrl?.absoluteString
@@ -96,6 +90,7 @@ static let shared = APIManager()
         }
     }
     
+    // MARK: - SingIn
     class func singIn(email: String?, password: String?, complition: @escaping (AuthResult) -> Void) {
         guard let email = email, let password = password else {
             complition(.failure(AuthError.notFilled))

@@ -8,12 +8,12 @@
 import UIKit
 
 class TripsTableViewCell: UITableViewCell {
-    @IBOutlet weak var modeView: UIView!
     
+    // MARK: - IBOutlets
+    @IBOutlet weak var modeView: UIView!
     @IBOutlet weak var tripImageView: UIImageView!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    
     @IBOutlet weak var costsLabel: UILabel!
     
     override func awakeFromNib() {
@@ -31,6 +31,8 @@ class TripsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
     func dropShadow(view: UIView, shadowOpacity: Float = 0.5, shadowColor: CGColor = UIColor.gray.cgColor, shadowRadius: CGFloat = 5){
         view.layer.shadowColor = shadowColor
         view.layer.shadowOpacity = shadowOpacity

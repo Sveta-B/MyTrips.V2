@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F03AC752636A5B2009E0CC5 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03AC742636A5B1009E0CC5 /* CustomTextField.swift */; };
+		3F03AC782636C1E7009E0CC5 /* AddTripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03AC772636C1E7009E0CC5 /* AddTripTableViewController.swift */; };
 		3F13EE6E2614F88C00820668 /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13EE6D2614F88C00820668 /* MyUser.swift */; };
 		3F13EE712615021400820668 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13EE702615021400820668 /* TripsViewController.swift */; };
 		3F1DB145262D8F700096BDC7 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1DB143262D8F700096BDC7 /* TripsTableViewCell.swift */; };
@@ -23,6 +25,8 @@
 		3F634F9C262B741700EA2B8C /* DreamsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F634F9B262B741700EA2B8C /* DreamsStoryboard.storyboard */; };
 		3F634F9F262B742800EA2B8C /* TripsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F634F9E262B742800EA2B8C /* TripsStoryboard.storyboard */; };
 		3F634FA2262B743600EA2B8C /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F634FA1262B743600EA2B8C /* HomeStoryboard.storyboard */; };
+		3F6EB8CE264EF62300C135D3 /* DatePicker .swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6EB8CD264EF62300C135D3 /* DatePicker .swift */; };
+		3F6EB8D2264FDC2400C135D3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6EB8D1264FDC2400C135D3 /* ImagePicker.swift */; };
 		3FB888FA2616F9CE002C243F /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB888F92616F9CE002C243F /* CustomView.swift */; };
 		3FC06AF226033ADA00D9E722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC06AF126033ADA00D9E722 /* AppDelegate.swift */; };
 		3FC06AF426033ADA00D9E722 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC06AF326033ADA00D9E722 /* SceneDelegate.swift */; };
@@ -34,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F03AC742636A5B1009E0CC5 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		3F03AC772636C1E7009E0CC5 /* AddTripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripTableViewController.swift; sourceTree = "<group>"; };
 		3F13EE6D2614F88C00820668 /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
 		3F13EE702615021400820668 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		3F1DB143262D8F700096BDC7 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
@@ -50,6 +56,8 @@
 		3F634F9B262B741700EA2B8C /* DreamsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DreamsStoryboard.storyboard; sourceTree = "<group>"; };
 		3F634F9E262B742800EA2B8C /* TripsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsStoryboard.storyboard; sourceTree = "<group>"; };
 		3F634FA1262B743600EA2B8C /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
+		3F6EB8CD264EF62300C135D3 /* DatePicker .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DatePicker .swift"; sourceTree = "<group>"; };
+		3F6EB8D1264FDC2400C135D3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3FB888F92616F9CE002C243F /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		3FC06AEE26033ADA00D9E722 /* MyTrips.V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTrips.V2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC06AF126033ADA00D9E722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +94,7 @@
 				3F13EE702615021400820668 /* TripsViewController.swift */,
 				3F1DB143262D8F700096BDC7 /* TripsTableViewCell.swift */,
 				3F1DB144262D8F700096BDC7 /* TripsTableViewCell.xib */,
+				3F03AC772636C1E7009E0CC5 /* AddTripTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -94,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				3FB888F92616F9CE002C243F /* CustomView.swift */,
+				3F03AC742636A5B1009E0CC5 /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,6 +159,8 @@
 		3F2D612B26034EEB00B3862C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3F6EB8CD264EF62300C135D3 /* DatePicker .swift */,
+				3F6EB8D1264FDC2400C135D3 /* ImagePicker.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -327,8 +339,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F03AC752636A5B2009E0CC5 /* CustomTextField.swift in Sources */,
+				3F03AC782636C1E7009E0CC5 /* AddTripTableViewController.swift in Sources */,
 				3F4A5179261709EA00D6051F /* TripModel.swift in Sources */,
+				3F6EB8D2264FDC2400C135D3 /* ImagePicker.swift in Sources */,
 				3F54D63A2607E24A0086A11E /* MainTabBarViewController.swift in Sources */,
+				3F6EB8CE264EF62300C135D3 /* DatePicker .swift in Sources */,
 				3F54D61C2604997F0086A11E /* APIManager.swift in Sources */,
 				3F54D615260368920086A11E /* LoginViewController.swift in Sources */,
 				3FC06AF226033ADA00D9E722 /* AppDelegate.swift in Sources */,
